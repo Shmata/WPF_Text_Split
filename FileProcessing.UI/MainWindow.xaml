@@ -1,0 +1,26 @@
+﻿<Window x:Class="FileProcessing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileProcessing"
+        mc:Ignorable="d"
+        Title="MainWindow" Closing="Window_Closing" Height="450" Width="800">
+    <Grid Background="#EEEEEE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" FontSize="16" FontWeight="Bold" Grid.Row="0" HorizontalAlignment="Center" Content="Input file" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" FontSize="16" FontWeight="Bold" Grid.Row="1" HorizontalAlignment="Center" Content="Processed data" VerticalAlignment="Top"/>
+        <DataGrid Grid.Column="1" Grid.Row="1" Name="dgData" Background="#CCCCCC" />
+        <Button Grid.Column="1" Grid.Row="2" Name="btnProcess" FontSize="16" FontWeight="Bold" Content="Process" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click" RenderTransformOrigin="0.5,0.5" Width="100"/>
+        <TextBox Grid.Column="1" FontSize="16" Name="txtFile" MouseDoubleClick="TxtFile_DoubleClick" Text=".\sample.txt" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,2,0,0" Width="590"  />
+        <Button Grid.Column="1" Grid.Row="2" Name="btnCancel" FontSize="16" FontWeight="Bold" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnCancel_Click" Margin="115,0,0,0"/>
+    </Grid>
+</Window>
